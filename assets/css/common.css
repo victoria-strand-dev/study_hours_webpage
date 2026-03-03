@@ -1,6 +1,6 @@
 :root {
     --primary-color: #001adb;
-    --secondary-color: #2e95cc;
+    --secondary-color: #3e78ff;
     --text-color: #303030;
     --background-color: rgb(235, 242, 255);
     --navbar-background: rgb(22, 22, 22);
@@ -15,13 +15,17 @@ html, body {
 }
 
 p {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .navbar {
@@ -31,6 +35,11 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: #303030 0px 8px 30px -10px;
+    font-size: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -53,41 +62,13 @@ body {
 }
 
 footer {
-    margin-top: auto;
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 15px;
     background-color: var(--navbar-background);
     text-align: center;
     color: white;
     box-shadow: #303030 0px 8px 30px -10px;
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 980px){
-    .hero-grid{ grid-template-columns: 1fr; }
-    .cards{ grid-template-columns: repeat(2, 1fr); }
-    .news{ grid-template-columns: 1fr; }
-    .two-col{ grid-template-columns: 1fr; }
-    .nav{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(11,18,32,0.95);
-    display: none;
-    flex-direction: column;
-    gap: var(--s-3);
-    padding: var(--s-4);
-    border-radius: 0 0 12px 12px;
-    }
-
-    .nav.open{
-    display:flex;
-    }
-
-    .nav-toggle{
-    display:block;
-    }
-}
-@media (max-width: 520px){
-    .cards{ grid-template-columns: 1fr; }
 }

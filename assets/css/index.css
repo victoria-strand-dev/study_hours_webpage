@@ -1,19 +1,24 @@
 :root{
-  --card-background: #f6f9ff;
+    --card-background: #f6f9ff;
 }
 
 .hero {
-  min-height: 60vh;
-  background: linear-gradient(to bottom, #001adb, #0000aa);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    min-height: 55vh;
+    background: linear-gradient(to bottom, #3e78ff,#003e86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  color: white;
-  text-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.hero img {
+    width: 220px;
+    height: auto;
 }
 
 .app-links {
@@ -52,7 +57,8 @@
     background-color: var(--card-background);
     padding: 20px;
     box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.025);
-    height: 600px;             /* 👈 fast kort-høyde */
+    min-height: 1000px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -60,12 +66,53 @@
 .card-content {
     display: flex;
     gap: 20px;
-    flex: 1;                    /* fyller kortet */
+    flex: 1;                  
     align-items: center;
 }
 
-.card-content img{
-    max-width: 400px;
+.card-content img {
+    max-width: 500px;
+    max-height: 1000px;
+    width: auto;
     height: auto;
+    object-fit: contain;
 }
 
+@media (max-width: 700px){
+    .hero {
+        min-height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero img{
+        width: 140px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards > div {
+        min-height: 600px;
+    }
+
+    .card-content {
+        display: flex;
+        gap: 20px;
+        flex: 1;                  
+        align-items: center;
+    }
+
+    .card-content img {
+        max-width: 280px;
+        max-height: 500px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
