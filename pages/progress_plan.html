@@ -15,15 +15,24 @@
 
     <body>
         <div class="navbar">
-            <ul>
-                <li><a href="../index.html">-> Home Page</a></li>
+            <div class="logo">StudyHours</div>
+
+            <button class="menu-toggle" aria-label="Åpne meny">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="specifics.html">Specifics</a></li>
+                <li><a href="diagrams.html">Diagrams</a></li>
+                <li><a href="../index.html">Progress plan</a></li>
             </ul>   
         </div>
 
         <main>
             <div class="hero">
                 <h1>StudyHours</h1>
-                <img src="../assets/svg/studyhours-logo.svg" alt="StudyHours logo">
+                <img src="../assets/svg/logoselfmade.svg" alt="StudyHours logo">
             </div>
 
             <div class="cards">
@@ -34,7 +43,16 @@
         </main>
 
         <footer id="contact">
-            <h4>&copy; 2026 StudyHours. All rights reserved.</h4>
+            <h4>&copy; 2026 StudyHours</h4>
         </footer>
+
+        <script>
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        </script>
     </body>
 </html>

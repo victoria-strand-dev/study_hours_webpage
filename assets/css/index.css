@@ -1,10 +1,10 @@
 :root{
-    --card-background: #F2F2F2;
+    --card-background: #F7F7F7;
 }
 
 .hero {
     min-height: 55vh;
-    background: linear-gradient(to bottom, #3e78ff,#003e86);
+    background: linear-gradient(to bottom,#b3d7fff5,#46BEFF);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +57,7 @@
     background-color: var(--card-background);
     padding: 20px;
     box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.025);
-    min-height: 1000px;
+    min-height: 500px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -65,15 +65,38 @@
 
 .card-content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.calculate,
+.result {
+    flex: 1 1 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculate h3,
+.result h3 {
+    margin-bottom: 20px;
+}
+
+.calculate-images,
+.result-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 20px;
-    flex: 1;                  
-    align-items: center;
+    width: 100%;
 }
 
 .card-content img {
-    max-width: 500px;
-    max-height: 1000px;
-    width: auto;
+    width: 200px;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -97,19 +120,19 @@
     }
 
     .cards > div {
-        min-height: 600px;
+        min-height: 300px;
     }
 
     .card-content {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         flex: 1;                  
         align-items: center;
     }
 
     .card-content img {
         max-width: 280px;
-        max-height: 500px;
+        max-height: 300px;
     }
 
     p {
